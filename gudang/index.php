@@ -117,6 +117,10 @@ if (!isset($_SESSION['user'])) {
                         include 'produk.php';
                     } else if ($_GET['page'] == 'pelanggan') {
                         include 'pelanggan.php';
+                    } else if ($_GET['page'] == 'penjualan') {
+                        include 'penjualan.php';
+                    } else if ($_GET['page'] == 'penjualan_produk') {
+                        include 'penjualan_produk.php';
                     } else if ($_GET['page'] == 'logout') {
                         include 'logout.php';
                     }
