@@ -19,10 +19,20 @@ if (isset($_SESSION['keranjang'])) {
 ?>
 
 <?php foreach ($keranjang as $key => $perproduk) : ?>
-    <div>
-        <h6><?= $perproduk['nama_produk']; ?></h6>
-        <span class="small text-muted"><?= number_format($perproduk['jual_produk']); ?></span>
-        <p class="small">x <?= $perproduk['jumlah']; ?></p>
+    <div class="row">
+        <div class="col-md-9">
+            <h6><?= $perproduk['nama_produk']; ?></h6>
+            <span class="small text-muted"><?= number_format($perproduk['jual_produk']); ?></span>
+            <span class="small float-end">x <?= $perproduk['jumlah']; ?></span>
+        </div>
+        <div class="col-md-3">
+            <div>
+                <i class="bi bi-plus-circle-fill tambahi" idnya="<?= $perproduk['id_produk']; ?>"></i>
+            </div>
+            <div>
+                <i class="bi bi-dash-circle-fill kurangi" idnya="<?= $perproduk['id_produk']; ?>"></i>
+            </div>
+        </div>
     </div>
     <hr>
 <?php endforeach; ?>
@@ -30,15 +40,15 @@ if (isset($_SESSION['keranjang'])) {
 <form action="" method="post">
     <div class="mb-3">
         <label for="">Total</label>
-        <input type="number" name="total" class="form-control" value="<?= $total; ?>" readonly>
+        <input type="number" name="total" class="form-control total" value="<?= $total; ?>" readonly>
     </div>
     <div class="mb-3">
         <label for="">Bayar</label>
-        <input type="number" name="bayar" class="form-control">
+        <input type="number" name="bayar" class="form-control bayar">
     </div>
     <div class="mb-3">
         <label for="">Kembalian</label>
-        <input type="number" name="kembalian" class="form-control" readonly>
+        <input type="number" name="kembalian" class="form-control kembalian" readonly>
     </div>
     <button class="btn btn-primary btn-sm">Checkour</button>
 </form>
