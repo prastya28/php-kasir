@@ -1,63 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'header.php' ?>
+<?php
+// Dapatkan ID toko dari user yg login
+$id_toko = $_SESSION['user']['id_toko'];
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasir</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-</head>
+// Dapatkan produk dari id toko ini
+$produk = array();
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
-        <div class="container">
-            <a class="navbar-brand" href="#">xToko</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Transaksi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Laporan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Akun</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+$produk = array();
+$ambil = $koneksi->query("SELECT * FROM produk WHERE id_toko='$id_toko'");
+while ($tiap = $ambil->fetch_assoc()) {
+    $produk[] = $tiap;
+}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dignissimos ipsum unde cumque voluptatibus natus asperiores eligendi deleniti ullam ratione totam doloribus laborum necessitatibus vel, voluptatem quisquam consequuntur, doloremque perferendis?
+// echo '<pre>';
+// print_r($produk);
+// echo '</pre>';
+
+echo '<pre>';
+print_r($_SESSION['keranjang']);
+echo '</pre>';
+
+
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <div class="row">
+                        <?php foreach ($produk as $key => $value) : ?>
+                            <div class="col-md-3">
+                                <a href="" class="text-decoration-none link-produk" idnya="<?= $value['id_produk']; ?>">
+                                    <img src="../assets/img/produk/<?= $value['foto_produk']; ?>" alt="" class="img-fluid">
+                                    <h6><?= $value['nama_produk']; ?></h6>
+                                    <span class="small text-muted">Rp. <?= number_format($value['jual_produk']); ?></span>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dignissimos ipsum unde cumque voluptatibus natus asperiores eligendi deleniti ullam ratione totam doloribus laborum necessitatibus vel, voluptatem quisquam consequuntur, doloremque perferendis?
-                    </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow">
+                <div class="card-body keranjang">
+
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-</body>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: 'tampilkeranjang.php',
+            success: function(hasil) {
+                $(".keranjang").html(hasil)
+            }
+        })
+    })
+</script>
 
-</html>
+<script>
+    $(document).ready(function() {
+        $(".link-produk").on("click", function() {
+            // dapatkan idnya
+            var id_produk = $(this).attr("idnya");
+            $.ajax({
+                type: 'post',
+                url: 'masukkankeranjang.php',
+                data: 'id_produk=' + id_produk,
+                success: function(hasil) {
+                    $.ajax({
+                        url: 'tampilkeranjang.php',
+                        success: function(hasil) {
+                            $(".keranjang").html(hasil)
+                        }
+                    })
+                }
+            })
+        })
+    })
+</script>
+<?php include 'footer.php' ?>
