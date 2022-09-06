@@ -1,3 +1,7 @@
+<?php
+include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 </head>
 
-<body class="bg-dark">
+<body>
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4 offset-md-4 mt-5 bg-light shadow p-5 rounded rounded-lg">
@@ -20,11 +24,11 @@
                 <form action="" method="POST">
                     <div class="mb-3">
                         <label for="">Email</label>
-                        <input type="email" name="email" class="form-control bg-dark text-light">
+                        <input type="email" name="email" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="">Password</label>
-                        <input type="password" name="password" class="form-control bg-dark text-light">
+                        <input type="password" name="password" class="form-control">
                     </div>
                     <button class="btn btn-primary" type="submit" name="login">Login</button>
                 </form>
@@ -35,3 +39,31 @@
 </body>
 
 </html>
+
+<?php
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = sha1($_POST['password']);
+
+    // Cek user di tabel user
+    $ambil = $koneksi->query("SELECT * FROM user WHERE email_user='$email' AND password_user='$password' ");
+    $cekuser = $ambil->fetch_assoc();
+
+    // Jika kosong
+    if (empty($cekuser)) {
+        echo "<script>alert('Login gagal!')</script>";
+        echo "<script>location='index.php'</script>";
+    } else {
+        // Menyimpan data login dalam session
+        $_SESSION['user'] = $cekuser;
+
+        if ($cekuser['level_user'] == 'kasir') {
+            echo "<script>alert('Login berhasil!')</script>";
+            echo "<script>location='kasir/index.php'</script>";
+        } else if ($cekuser['level_user'] == 'gudang') {
+            echo "<script>alert('Login berhasil!')</script>";
+            echo "<script>location='gudang/index.php'</script>";
+        }
+    }
+}
+?>

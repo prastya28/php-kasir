@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 </head>
 
-<body class="bg-dark">
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
         <div class="container">
             <a class="navbar-brand" href="#">xToko</a>
