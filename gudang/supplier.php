@@ -8,27 +8,26 @@ while ($tiap = $ambil->fetch_assoc()) {
     $supplier[] = $tiap;
 }
 
-echo '<pre>';
-print_r($supplier);
-echo '</pre>';
+// echo '<pre>';
+// print_r($supplier);
+// echo '</pre>';
 ?>
 
-<div class="card border-0 shadow">
-    <div class="card-header bg-primary text-white">Supplier</div>
-    <div class="card-body">
-        <table class="table">
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th class="w-1">No</th>
                     <th>Nama</th>
-                    <th>Opsi</th>
+                    <th class="w-25"></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($supplier as $key => $value) : ?>
                     <tr>
                         <td><?= $key + 1; ?></td>
-                        <td class="w-75"><?= $value['nama_supplier']; ?></td>
+                        <td><?= $value['nama_supplier']; ?></td>
                         <td>
                             <a href="">Edit</a>
                             <a href="">Hapus</a>

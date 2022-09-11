@@ -8,15 +8,14 @@ while ($tiap = $ambil->fetch_assoc()) {
     $produk[] = $tiap;
 }
 
-echo '<pre>';
-print_r($produk);
-echo '</pre>';
+// echo '<pre>';
+// print_r($produk);
+// echo '</pre>';
 ?>
 
-<div class="card border-0 shadow">
-    <div class="card-header bg-primary text-white">Produk</div>
-    <div class="card-body">
-        <table class="table">
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
             <thead>
                 <tr>
                     <th>No</th>

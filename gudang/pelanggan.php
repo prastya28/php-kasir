@@ -8,18 +8,18 @@ while ($tiap = $ambil->fetch_assoc()) {
     $pelanggan[] = $tiap;
 }
 
-echo '<pre>';
-print_r($pelanggan);
-echo '</pre>';
+// echo '<pre>';
+// print_r($pelanggan);
+// echo '</pre>';
 ?>
 
-<div class="card border-0 shadow">
-    <div class="card-header bg-primary text-white">Pelanggan</div>
-    <div class="card-body">
-        <table class="table">
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th class="w-1">No</th>
                     <th>Nama</th>
                     <th>Email</th>
                     <th>Telepon</th>

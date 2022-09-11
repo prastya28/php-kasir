@@ -10,15 +10,16 @@ while ($tiap = $ambil->fetch_assoc()) {
     $penjualan[] = $tiap;
 }
 
-echo '<pre>';
-print_r($penjualan);
-echo '</pre>';
+// echo '<pre>';
+// print_r($penjualan);
+// echo '</pre>';
 ?>
 
-<div class="card border-0 shadow">
-    <div class="card-header bg-primary text-white">penjualan</div>
-    <div class="card-body">
-        <table class="table">
+
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
             <thead>
                 <tr>
                     <th>No</th>

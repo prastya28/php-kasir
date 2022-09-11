@@ -17,39 +17,41 @@ while ($tiap = $ambil->fetch_assoc()) {
     $produk[] = $tiap;
 }
 
-echo "<pre>";
-print_r($penjualan);
-print_r($produk);
-echo "</pre>";
+// echo "<pre>";
+// print_r($penjualan);
+// print_r($produk);
+// echo "</pre>";
 ?>
 
-<div class="row mb-3">
-    <div class="col-md-3">
-        <div class="card border-0 shadow">
-            <div class="card">
-                <div class="card-body">
-                    <table class="table">
-                        <tr>
-                            <td>ID Penjualan</td>
-                            <td><?= $penjualan['id_penjualan']; ?></td>
-                        </tr>
-                        <tr>
-                            <td>Tanggal</td>
-                            <td><?= $penjualan['tanggal_penjualan']; ?></td>
-                        </tr>
-                        <tr>
-                            <td>Pelanggan</td>
-                            <td><?= $penjualan['nama_pelanggan']; ?> (<?= $penjualan['telepon_pelanggan']; ?>)</td>
-                        </tr>
-                    </table>
-                </div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Detail Penjualan</h3>
+    </div>
+    <div class="card-body">
+        <div class="datagrid">
+            <div class="datagrid-item">
+                <div class="datagrid-title">ID Penjualan</div>
+                <div class="datagrid-content"><?= $penjualan['id_penjualan']; ?></div>
+            </div>
+            <div class="datagrid-item">
+                <div class="datagrid-title">Tanggal</div>
+                <div class="datagrid-content"><?= $penjualan['tanggal_penjualan']; ?></div>
+            </div>
+            <div class="datagrid-item">
+                <div class="datagrid-title">Pelanggan</div>
+                <div class="datagrid-content"><?= $penjualan['nama_pelanggan']; ?> (<?= $penjualan['telepon_pelanggan']; ?>)</div>
             </div>
         </div>
     </div>
 </div>
-<div class="card border-0 shadow">
-    <div class="card-body">
-        <table class="table">
+
+<div class="card mt-3">
+    <div class="card-header">
+        <h3 class="card-title">Detail Produk</h3>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
             <thead>
                 <tr>
                     <th>No</th>
@@ -97,6 +99,5 @@ echo "</pre>";
                 </tr>
             </tfoot>
         </table>
-
     </div>
 </div>
