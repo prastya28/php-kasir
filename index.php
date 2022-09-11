@@ -10,6 +10,7 @@ include 'koneksi.php';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./assets/img/building-store.svg" type="image/x-icon">
     <title>Login</title>
     <!-- CSS files -->
     <link href="./assets/css/tabler.min.css" rel="stylesheet" />
