@@ -18,37 +18,61 @@ if (isset($_SESSION['keranjang'])) {
 // echo "</pre>";
 ?>
 
-<?php foreach ($keranjang as $key => $perproduk) : ?>
-    <div class="row">
-        <div class="col-md-9">
-            <h6><?= $perproduk['nama_produk']; ?></h6>
-            <span class="small text-muted"><?= number_format($perproduk['jual_produk']); ?></span>
-            <span class="small float-end">x <?= $perproduk['jumlah']; ?></span>
-        </div>
-        <div class="col-md-3">
-            <div>
-                <i class="bi bi-plus-circle-fill tambahi" idnya="<?= $perproduk['id_produk']; ?>"></i>
+<div class="pt-3 pb-2">
+    <?php foreach ($keranjang as $key => $perproduk) : ?>
+        <h3><?= $perproduk['nama_produk']; ?></h3>
+        <div class="row mb-3">
+            <div class="col">
+                <span class="text-muted">Rp. <?= number_format($perproduk['jual_produk']); ?></span>
             </div>
-            <div>
-                <i class="bi bi-dash-circle-fill kurangi" idnya="<?= $perproduk['id_produk']; ?>"></i>
+            <div class="col-auto">
+                <a href="#" class="link-muted kurangi" idnya="<?= $perproduk['id_produk']; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <line x1="9" y1="12" x2="15" y2="12"></line>
+                    </svg>
+                </a>
+            </div>
+            <div class="col-auto">
+                x<?= $perproduk['jumlah']; ?>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="link-muted tambahi" idnya="<?= $perproduk['id_produk']; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <line x1="9" y1="12" x2="15" y2="12"></line>
+                        <line x1="12" y1="9" x2="12" y2="15"></line>
+                    </svg>
+                </a>
             </div>
         </div>
-    </div>
-    <hr>
-<?php endforeach; ?>
+    <?php endforeach; ?>
+</div>
 
-<form action="" method="post">
-    <div class="mb-3">
-        <label for="">Total</label>
-        <input type="number" name="total" class="form-control total" value="<?= $total; ?>" readonly>
-    </div>
-    <div class="mb-3">
-        <label for="">Bayar</label>
-        <input type="number" name="bayar" class="form-control bayar">
-    </div>
-    <div class="mb-3">
-        <label for="">Kembalian</label>
-        <input type="number" name="kembalian" class="form-control kembalian" readonly>
-    </div>
-    <button class="btn btn-primary btn-sm">Checkour</button>
-</form>
+<div class="mt-3">
+    <form action="" method="post">
+        <div class="mb-3">
+            <label for="" class="form-label">Total</label>
+            <input type="number" name="total" class="form-control total" value="<?= $total; ?>" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Bayar</label>
+            <input type="number" name="bayar" class="form-control bayar">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Kembalian</label>
+            <input type="number" name="kembalian" class="form-control kembalian" readonly>
+        </div>
+        <button class="btn btn-primary w-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <rect x="7" y="9" width="14" height="10" rx="2"></rect>
+                <circle cx="14" cy="14" r="2"></circle>
+                <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"></path>
+            </svg>
+            Checkout
+        </button>
+    </form>
+</div>

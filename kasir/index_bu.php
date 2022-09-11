@@ -22,58 +22,29 @@ while ($tiap = $ambil->fetch_assoc()) {
 
 
 ?>
-<div class="page-body">
-    <div class="container-xl">
-        <div class="col-12">
-            <div class="row row-cards">
-                <?php foreach ($produk as $key => $value) : ?>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>
-                                    <?= $value['nama_produk']; ?>
-                                </h3>
-                                <div class="card-actions">
-                                    <h3>
-                                        <span class="badge bg-success mx-2">Rp. <?= number_format($value['jual_produk']); ?></span>
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <img src="../assets/img/produk/<?= $value['foto_produk']; ?>" alt="" class="img-fluid">
-                            </div>
-                            <div class="card-footer">
-                                <a href="" class="btn btn-primary w-100 link-produk" idnya="<?= $value['id_produk']; ?>">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <circle cx="6" cy="19" r="2"></circle>
-                                        <circle cx="17" cy="19" r="2"></circle>
-                                        <path d="M17 17h-11v-14h-2"></path>
-                                        <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13"></path>
-                                        <path d="M15 6h6m-3 -3v6"></path>
-                                    </svg> Tambah
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <div class="row">
+                        <?php foreach ($produk as $key => $value) : ?>
+                            <div class="col-md-3">
+                                <a href="" class="text-decoration-none link-produk" idnya="<?= $value['id_produk']; ?>">
+                                    <img src="../assets/img/produk/<?= $value['foto_produk']; ?>" alt="" class="img-fluid">
+                                    <h6><?= $value['nama_produk']; ?></h6>
+                                    <span class="small text-muted">Rp. <?= number_format($value['jual_produk']); ?></span>
                                 </a>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <circle cx="6" cy="19" r="2"></circle>
-                                    <circle cx="17" cy="19" r="2"></circle>
-                                    <path d="M17 17h-11v-14h-2"></path>
-                                    <path d="M6 5l14 1l-1 7h-13"></path>
-                                </svg> Keranjang
-                            </h3>
-                        </div>
-                        <div class="card-body keranjang">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow">
+                <div class="card-body keranjang">
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

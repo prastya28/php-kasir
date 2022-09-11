@@ -2,40 +2,54 @@
 include 'koneksi.php';
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login</title>
+    <!-- CSS files -->
+    <link href="./assets/css/tabler.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 </head>
 
-<body>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 mt-5 bg-light shadow p-5 rounded rounded-lg">
-                <div class="text-center mb-3">
-                    <img src="./assets/img/logo.png" width="150" alt="">
+<body class="border-top-wide border-primary d-flex flex-column theme-dark">
+    <div class="page page-center">
+        <div class="container-tight py-4">
+            <div class="text-center mb-4">
+                <h2><a href="index.php" class="navbar-brand navbar-brand-autodark"><img src="./assets/img/building-store.svg" height="36" alt="">&nbsp;PHP-KASIR</a></h2>
+            </div>
+            <div class="card card-md">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Masuk ke akun anda</h2>
+                    <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Kata sandi</label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="form-footer">
+                            <button class="btn btn-primary w-100" type="submit" name="login"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                                    <path d="M20 12h-13l3 -3m0 6l-3 -3"></path>
+                                </svg>Login</button>
+                        </div>
+                    </form>
                 </div>
-                <form action="" method="POST">
-                    <div class="mb-3">
-                        <label for="">Email</label>
-                        <input type="email" name="email" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="">Password</label>
-                        <input type="password" name="password" class="form-control">
-                    </div>
-                    <button class="btn btn-primary" type="submit" name="login">Login</button>
-                </form>
             </div>
         </div>
     </div>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/tabler.min.js" defer></script>
 </body>
 
 </html>

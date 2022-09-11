@@ -65,10 +65,10 @@ if ($skrg == "dashboard") {
                             <span class="avatar avatar-sm" style="background-image: url(https://placekitten.com/200/300)"></span>
                             <div class="d-none d-xl-block ps-2">
                                 <div>
-                                    <?php echo $_SESSION['user']['nama_user']; ?>
+                                    <?= $_SESSION['user']['nama_user']; ?>
                                 </div>
                                 <div class="mt-1 small text-muted">
-                                    <?php echo $_SESSION['user']['level_user']; ?>
+                                    <?= $_SESSION['user']['level_user']; ?>
                                 </div>
                             </div>
                         </a>
