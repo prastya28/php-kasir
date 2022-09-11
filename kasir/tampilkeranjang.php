@@ -56,7 +56,7 @@ if (isset($_SESSION['keranjang'])) {
     <?php endif; ?>
 </div>
 
-<div class="mt-3">
+<div class="mt-3 mb-2">
     <form action="" method="post">
         <div class="mb-3">
             <label for="" class="form-label">Total</label>
