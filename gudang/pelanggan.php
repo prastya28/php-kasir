@@ -24,7 +24,7 @@ while ($tiap = $ambil->fetch_assoc()) {
                     <th>Email</th>
                     <th>Telepon</th>
                     <th>Alamat</th>
-                    <th>Opsi</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="../assets/img/building-store.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/building-store.png" type="image/x-icon">
     <title>Kasir</title>
     <!-- CSS files -->
     <link href="../assets/css/tabler.min.css" rel="stylesheet" />
@@ -26,7 +26,7 @@ if (!isset($_SESSION['user'])) {
 
 </head>
 
-<body class="theme-dark">
+<body>
     <div class="page">
         <header class="navbar navbar-expand-md navbar-light d-print-none">
             <div class="container-xl">
@@ -35,7 +35,14 @@ if (!isset($_SESSION['user'])) {
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                     <a href="index.php" class="text-decoration-none">
-                        <img src="../assets/img/building-store.svg" height="32" alt="Tabler" class="navbar-brand-image"> KASIR
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-store" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <line x1="3" y1="21" x2="21" y2="21"></line>
+                            <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"></path>
+                            <line x1="5" y1="21" x2="5" y2="10.85"></line>
+                            <line x1="19" y1="21" x2="19" y2="10.85"></line>
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path>
+                        </svg> KASIR
                     </a>
                 </h1>
                 <div class="navbar-nav flex-row order-md-last">

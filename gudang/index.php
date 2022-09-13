@@ -15,7 +15,7 @@ if (isset($_GET['page'])) {
 }
 
 if ($skrg == "dashboard") {
-    $subjudul = "Dashboard";
+    $subjudul = "Beranda";
 } else if ($skrg == 'supplier') {
     $subjudul = "Supplier";
 } else if ($skrg == 'kategori') {
@@ -41,23 +41,30 @@ if ($skrg == "dashboard") {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="../assets/img/building-store.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/building-store.png" type="image/x-icon">
     <title><?= $subjudul; ?> / Gudang</title>
     <!-- CSS files -->
     <link href="../assets/css/tabler.min.css" rel="stylesheet" />
 </head>
 
-<body class="theme-dark">
+<body>
 
     <div class="page">
-        <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
+        <aside class="navbar navbar-vertical navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark">
                     <a href="index.php" class="text-decoration-none">
-                        <img src="../assets/img/building-store.svg" height="32" alt="Tabler" class="navbar-brand-image"> GUDANG
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-store" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <line x1="3" y1="21" x2="21" y2="21"></line>
+                            <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"></path>
+                            <line x1="5" y1="21" x2="5" y2="10.85"></line>
+                            <line x1="19" y1="21" x2="19" y2="10.85"></line>
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path>
+                        </svg> GUDANG
                     </a>
                 </h1>
                 <div class="navbar-nav flex-row d-lg-none">
@@ -86,6 +93,15 @@ if ($skrg == "dashboard") {
 
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="navbar-nav pt-lg-3">
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                </span>
+                                <span class="nav-link-title text-muted">
+                                    <strong>Dashboard</strong>
+                                </span>
+                            </span>
+                        </li>
                         <li class="nav-item <?= ($skrg == 'dashboard') ? 'active' : ''; ?>">
                             <a class="nav-link" href="index.php">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -98,7 +114,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Dashboard
+                                    Beranda
                                 </span>
                             </a>
                         </li>
@@ -152,6 +168,15 @@ if ($skrg == "dashboard") {
                                     Produk
                                 </span>
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                </span>
+                                <span class="nav-link-title text-muted">
+                                    <strong>Pendataan</strong>
+                                </span>
+                            </span>
                         </li>
                         <li class="nav-item <?= ($skrg == 'pelanggan') ? 'active' : ''; ?>">
                             <a class="nav-link" href="index.php?page=pelanggan">
@@ -278,7 +303,7 @@ if ($skrg == "dashboard") {
                         <div class="col">
                             <!-- Page pre-title -->
                             <div class="page-pretitle">
-                                Overview
+                                Halaman
                             </div>
                             <h2 class="page-title">
                                 <?= $subjudul; ?>

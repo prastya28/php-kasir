@@ -54,11 +54,11 @@ while ($tiap = $ambil->fetch_assoc()) {
         <table class="table table-vcenter card-table">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th class="w-1">No</th>
                     <th>Produk</th>
                     <th>Harga Beli</th>
                     <th>Harga Jual</th>
-                    <th>Jumlah</th>
+                    <th>QTY</th>
                     <th>Subtotal</th>
                 </tr>
             </thead>
@@ -69,10 +69,10 @@ while ($tiap = $ambil->fetch_assoc()) {
                     <tr>
                         <td><?= $key + 1; ?></td>
                         <td><?= $value['nama_jual']; ?></td>
-                        <td><?= number_format($value['harga_beli']); ?></td>
-                        <td><?= number_format($value['harga_jual']); ?></td>
+                        <td>Rp. <?= number_format($value['harga_beli']); ?></td>
+                        <td>Rp. <?= number_format($value['harga_jual']); ?></td>
                         <td><?= $value['jumlah_jual']; ?></td>
-                        <td><?= number_format($value['subtotal_jual']); ?></td>
+                        <td>Rp. <?= number_format($value['subtotal_jual']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -80,22 +80,22 @@ while ($tiap = $ambil->fetch_assoc()) {
                 <tr>
                     <td colspan="4"></td>
                     <td colspan="1">Total</td>
-                    <td><?= number_format($penjualan['total_penjualan']); ?></td>
+                    <td>Rp. <?= number_format($penjualan['total_penjualan']); ?></td>
                 </tr>
                 <tr>
                     <td colspan="4"></td>
                     <td colspan="1">Bayar</td>
-                    <td><?= number_format($penjualan['bayar_penjualan']); ?></td>
+                    <td>Rp. <?= number_format($penjualan['bayar_penjualan']); ?></td>
                 </tr>
                 <tr>
                     <td colspan="4"></td>
                     <td colspan="1">Kembalian</td>
-                    <td><?= number_format($penjualan['kembalian_penjualan']); ?></td>
+                    <td>Rp. <?= number_format($penjualan['kembalian_penjualan']); ?></td>
                 </tr>
                 <tr>
                     <td colspan="4"></td>
                     <td colspan="1">Keuntungan</td>
-                    <td><?= number_format($keuntungan) ?></td>
+                    <td>Rp. <?= number_format($keuntungan) ?></td>
                 </tr>
             </tfoot>
         </table>

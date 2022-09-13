@@ -22,13 +22,13 @@ while ($tiap = $ambil->fetch_assoc()) {
         <table class="table table-vcenter card-table">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th class="w-1">No</th>
                     <th>Tanggal</th>
                     <th>Pelanggan</th>
                     <th>Total</th>
                     <th>Bayar</th>
                     <th>Kembalian</th>
-                    <th>Opsi</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -37,9 +37,9 @@ while ($tiap = $ambil->fetch_assoc()) {
                         <td><?= $key + 1; ?></td>
                         <td><?= date("d M Y H:s", strtotime($value['tanggal_penjualan'])); ?></td>
                         <td><?= $value['nama_pelanggan']; ?> (<?= $value['telepon_pelanggan']; ?>)</td>
-                        <td><?= number_format($value['total_penjualan']); ?></td>
-                        <td><?= number_format($value['bayar_penjualan']); ?></td>
-                        <td><?= number_format($value['kembalian_penjualan']); ?></td>
+                        <td>Rp. <?= number_format($value['total_penjualan']); ?></td>
+                        <td>Rp. <?= number_format($value['bayar_penjualan']); ?></td>
+                        <td>Rp. <?= number_format($value['kembalian_penjualan']); ?></td>
                         <td>
                             <a href="index.php?page=penjualan_produk&id=<?= $value['id_penjualan']; ?>">Detail</a>
                             <a href="">Hapus</a>

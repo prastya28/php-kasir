@@ -10,7 +10,7 @@ include 'koneksi.php';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="./assets/img/building-store.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/building-store.png" type="image/x-icon">
     <title>Login</title>
     <!-- CSS files -->
     <link href="./assets/css/tabler.min.css" rel="stylesheet" />
@@ -19,7 +19,7 @@ include 'koneksi.php';
 
 </head>
 
-<body class="border-top-wide border-primary d-flex flex-column theme-dark">
+<body class="border-top-wide border-primary d-flex flex-column">
     <div class="page page-center">
         <div class="container-tight py-4">
             <div class="text-center mb-4">

@@ -18,13 +18,13 @@ while ($tiap = $ambil->fetch_assoc()) {
         <table class="table table-vcenter card-table">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th class="w-1">No</th>
                     <th>Kode</th>
                     <th>Nama</th>
                     <th>Beli</th>
                     <th>Jual</th>
                     <th>Stok</th>
-                    <th>Opsi</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -33,8 +33,8 @@ while ($tiap = $ambil->fetch_assoc()) {
                         <td><?= $key + 1; ?></td>
                         <td><?= $value['kode_produk']; ?></td>
                         <td><?= $value['nama_produk']; ?></td>
-                        <td><?= $value['beli_produk']; ?></td>
-                        <td><?= $value['jual_produk']; ?></td>
+                        <td>Rp. <?= number_format($value['beli_produk']); ?></td>
+                        <td>Rp. <?= number_format($value['jual_produk']); ?></td>
                         <td><?= $value['stok_produk']; ?></td>
                         <td>
                             <a href="">Edit</a>
