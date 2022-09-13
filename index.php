@@ -12,45 +12,47 @@ include 'koneksi.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="./assets/img/building-store.png" type="image/x-icon">
     <title>Login</title>
-    <!-- CSS files -->
-    <link href="./assets/css/tabler.min.css" rel="stylesheet" />
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- CSS files -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
 
 </head>
 
-<body class="border-top-wide border-primary d-flex flex-column">
-    <div class="page page-center">
-        <div class="container-tight py-4">
-            <div class="text-center mb-4">
-                <h2><a href="index.php" class="navbar-brand navbar-brand-autodark"><img src="./assets/img/building-store.svg" height="36" alt="">&nbsp;PHP-KASIR</a></h2>
+<body>
+
+    <section>
+        <div class=" items-center px-5 py-12 lg:px-20">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+                <h2 class="mt-6 text-3xl font-extrabold text-center text-neutral-600">Login to your account</h2>
             </div>
-            <div class="card card-md">
-                <div class="card-body">
-                    <h2 class="card-title text-center mb-4">Masuk ke akun anda</h2>
-                    <form action="" method="POST">
-                        <div class="mb-3">
-                            <label for="" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Kata sandi</label>
-                            <input type="password" name="password" class="form-control">
-                        </div>
-                        <div class="form-footer">
-                            <button class="btn btn-primary w-100" type="submit" name="login"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
-                                    <path d="M20 12h-13l3 -3m0 6l-3 -3"></path>
-                                </svg>Login</button>
-                        </div>
-                    </form>
+            <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
+                <div class="mt-8">
+                    <div class="mt-6">
+                        <form action="#" method="POST" class="space-y-6" data-bitwarden-watching="1">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-neutral-600"> Email </label>
+                                <div class="mt-1">
+                                    <input id="email" name="email" type="email" autocomplete="email" required="" placeholder="Your Email" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label for="password" class="block text-sm font-medium text-neutral-600"> Password </label>
+                                <div class="mt-1">
+                                    <input id="password" name="password" type="password" autocomplete="current-password" required="" placeholder="Your Password" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit" name="login" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Login</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="./assets/js/tabler.min.js" defer></script>
 </body>
 
 </html>
