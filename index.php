@@ -73,10 +73,10 @@ if (isset($_POST['login'])) {
         $_SESSION['user'] = $cekuser;
 
         if ($cekuser['level_user'] == 'kasir') {
-            echo "<script>alert('Login berhasil!')</script>";
+            // echo "<script>alert('Login berhasil!')</script>";
             echo "<script>location='kasir/index.php'</script>";
         } else if ($cekuser['level_user'] == 'gudang') {
-            echo "<script>alert('Login berhasil!')</script>";
+            // echo "<script>alert('Login berhasil!')</script>";
             echo "<script>location='gudang/index.php'</script>";
         }
     }

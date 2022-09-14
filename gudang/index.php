@@ -114,7 +114,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Beranda
+                                    Home
                                 </span>
                             </a>
                         </li>
@@ -132,7 +132,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Supplier
+                                    Suppliers
                                 </span>
                             </a>
                         </li>
@@ -149,7 +149,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Kategori
+                                    Categories
                                 </span>
                             </a>
                         </li>
@@ -165,18 +165,9 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Produk
+                                    Products
                                 </span>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <span class="nav-link">
-                                <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                </span>
-                                <span class="nav-link-title text-muted">
-                                    <strong>PENDATAAN</strong>
-                                </span>
-                            </span>
                         </li>
                         <li class="nav-item <?= ($skrg == 'pelanggan') ? 'active' : ''; ?>">
                             <a class="nav-link" href="index.php?page=pelanggan">
@@ -191,9 +182,18 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Pelanggan
+                                    Customers
                                 </span>
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                </span>
+                                <span class="nav-link-title text-muted">
+                                    <strong>REPORTS</strong>
+                                </span>
+                            </span>
                         </li>
                         <li class="nav-item <?= ($skrg == 'penjualan' or $skrg == 'penjualan_produk') ? 'active' : ''; ?>">
                             <a class="nav-link" href="index.php?page=penjualan">
@@ -208,7 +208,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Penjualan
+                                    Sales
                                 </span>
                             </a>
                         </li>
@@ -228,17 +228,17 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Laporan
+                                    Incomes
                                 </span>
                             </a>
                             <div class="dropdown-menu <?= ($skrg == 'laporan_penjualan' or $skrg == 'laporan_keuntungan') ? 'show' : ''; ?>">
                                 <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
                                         <a class="dropdown-item <?= ($skrg == 'laporan_penjualan') ? 'active' : ''; ?>" href="index.php?page=laporan_penjualan">
-                                            Laporan Penjualan
+                                            Sales
                                         </a>
                                         <a class="dropdown-item <?= ($skrg == 'laporan_keuntungan') ? 'active' : ''; ?>" href="index.php?page=laporan_keuntungan">
-                                            Laporan Keuntungan
+                                            Revenues
                                         </a>
 
                                     </div>
