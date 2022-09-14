@@ -98,7 +98,7 @@ if ($skrg == "dashboard") {
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 </span>
                                 <span class="nav-link-title text-muted">
-                                    <strong>Dashboard</strong>
+                                    <strong>DASHBOARD</strong>
                                 </span>
                             </span>
                         </li>
@@ -174,7 +174,7 @@ if ($skrg == "dashboard") {
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 </span>
                                 <span class="nav-link-title text-muted">
-                                    <strong>Pendataan</strong>
+                                    <strong>PENDATAAN</strong>
                                 </span>
                             </span>
                         </li>
