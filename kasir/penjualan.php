@@ -57,6 +57,7 @@ while ($tiap = $ambil->fetch_assoc()) {
                                 <td>Rp. <?= number_format($value['kembalian_penjualan']); ?></td>
                                 <td>
                                     <a href="penjualan_produk.php?id=<?= $value['id_penjualan']; ?>">Detail</a>
+                                    <a href="penjualan_hapus.php?id=<?= $value['id_penjualan']; ?>" onclick="return confirm('Apakah anda yakin?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

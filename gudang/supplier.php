@@ -34,7 +34,7 @@ while ($tiap = $ambil->fetch_assoc()) {
                         <td><?= $value['nama_supplier']; ?></td>
                         <td>
                             <a href="index.php?page=supplier_edit&id=<?= $value['id_supplier']; ?>">Edit</a>
-                            <a href="index.php?page=supplier_hapus&id=<?= $value['id_supplier']; ?>">Hapus</a>
+                            <a href="index.php?page=supplier_hapus&id=<?= $value['id_supplier']; ?>" onclick="return confirm('Apakah anda yakin?')">Hapus</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
