@@ -33,8 +33,8 @@ while ($tiap = $ambil->fetch_assoc()) {
                         <td><?= $key + 1; ?></td>
                         <td><?= $value['nama_kategori']; ?></td>
                         <td>
-                            <a href="">Edit</a>
-                            <a href="">Hapus</a>
+                            <a href="index.php?page=kategori_edit&id=<?= $value['id_kategori']; ?>">Edit</a>
+                            <a href="index.php?page=kategori_hapus&id=<?= $value['id_kategori']; ?>">Hapus</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -5,7 +5,7 @@ $id_toko = $_SESSION['user']['id_toko'];
 $penjualan = array();
 $ambil = $koneksi->query("SELECT * FROM penjualan 
                             LEFT JOIN pelanggan ON penjualan.id_pelanggan=pelanggan.id_pelanggan
-                                WHERE penjualan.id_toko='$id_toko'");
+                                WHERE penjualan.id_toko='$id_toko' ORDER BY id_penjualan DESC");
 while ($tiap = $ambil->fetch_assoc()) {
     $penjualan[] = $tiap;
 }
@@ -36,13 +36,16 @@ while ($tiap = $ambil->fetch_assoc()) {
                     <tr>
                         <td><?= $key + 1; ?></td>
                         <td><?= date("d M Y H:s", strtotime($value['tanggal_penjualan'])); ?></td>
-                        <td><?= $value['nama_pelanggan']; ?> (<?= $value['telepon_pelanggan']; ?>)</td>
+                        <td>
+                            <?php if ($value['nama_pelanggan'] != 0) : ?>
+                                <?= $value['nama_pelanggan']; ?> (<?= $value['telepon_pelanggan']; ?>)
+                                <?php else : ?>-<?php endif; ?>
+                        </td>
                         <td>Rp. <?= number_format($value['total_penjualan']); ?></td>
                         <td>Rp. <?= number_format($value['bayar_penjualan']); ?></td>
                         <td>Rp. <?= number_format($value['kembalian_penjualan']); ?></td>
                         <td>
                             <a href="index.php?page=penjualan_produk&id=<?= $value['id_penjualan']; ?>">Detail</a>
-                            <a href="">Hapus</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -30,10 +30,16 @@ if ($skrg == "dashboard") {
     $subjudul = "Penjualan";
 } else if ($skrg == 'supplier_tambah') {
     $subjudul = "Tambah Supplier";
+} else if ($skrg == 'supplier_edit') {
+    $subjudul = "Ubah Supplier";
 } else if ($skrg == 'kategori_tambah') {
     $subjudul = "Tambah Kategori";
+} else if ($skrg == 'kategori_edit') {
+    $subjudul = "Ubah Kategori";
 } else if ($skrg == 'produk_tambah') {
     $subjudul = "Tambah Produk";
+} else if ($skrg == 'produk_edit') {
+    $subjudul = "Ubah Produk";
 } else {
     $subjudul = "404";
 }
@@ -339,10 +345,22 @@ if ($skrg == "dashboard") {
                                 include 'penjualan_produk.php';
                             } else if ($_GET['page'] == 'supplier_tambah') {
                                 include 'supplier_tambah.php';
+                            } else if ($_GET['page'] == 'supplier_edit') {
+                                include 'supplier_edit.php';
+                            } else if ($_GET['page'] == 'supplier_hapus') {
+                                include 'supplier_hapus.php';
                             } else if ($_GET['page'] == 'kategori_tambah') {
                                 include 'kategori_tambah.php';
+                            } else if ($_GET['page'] == 'kategori_edit') {
+                                include 'kategori_edit.php';
+                            } else if ($_GET['page'] == 'kategori_hapus') {
+                                include 'kategori_hapus.php';
                             } else if ($_GET['page'] == 'produk_tambah') {
                                 include 'produk_tambah.php';
+                            } else if ($_GET['page'] == 'produk_edit') {
+                                include 'produk_edit.php';
+                            } else if ($_GET['page'] == 'produk_hapus') {
+                                include 'produk_hapus.php';
                             } else if ($_GET['page'] == 'logout') {
                                 include 'logout.php';
                             }
