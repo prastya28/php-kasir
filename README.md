@@ -7,16 +7,17 @@ Aplikasi Kasir menggunakan PHP & MySQL. Project masih _Work in Progress_ tapi se
 - Clone project atau download zip.
 - Extract file zip ke folder root web server (misal, **htdocs** atau **www**).
 - Langsung import file SQL-nya. Tidak perlu buat database-nya dulu.
+- Cek konfigurasi MySQL di file **koneksi.php**.
 - Jalankan web server.
 
 ### Detail Login
 
 Gudang:
 
-> Email: test2@test.com
+> Email: [test2@test.com](mailto:test2@test.com)
 > Password: 12345678
 
 Kasir:
 
-> Email: test@test.com
+> Email: [test@test.com](mailto:test@test.com)
 > Password: 123456
