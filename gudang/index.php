@@ -290,7 +290,7 @@ if ($skrg == "dashboard") {
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <a href="index.php?page=user" class="dropdown-item">Pengguna</a>
+                            <a href="index.php?page=user" class="dropdown-item <?= ($skrg == 'user') ? 'active' : ''; ?>">Pengguna</a>
                             <div class="dropdown-divider"></div>
                             <a href="index.php?page=logout" class="dropdown-item">Logout</a>
                         </div>
@@ -409,7 +409,7 @@ if ($skrg == "dashboard") {
                             <ul class="list-inline list-inline-dots mb-0">
                                 <li class="list-inline-item">
                                     Copyright &copy; <?= date("Y"); ?>
-                                    <a href="#" class="link-secondary">farpras</a>.
+                                    <a href="https://github.com/prastya28/php-kasir" class="link-secondary">farpras</a>.
                                     All rights reserved.
                                 </li>
                             </ul>

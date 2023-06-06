@@ -7,6 +7,20 @@ if (!isset($_SESSION['user'])) {
     echo "<script>location='../index.php'</script>";
     exit();
 }
+
+$skrg = $_SERVER['REQUEST_URI'];
+$subtitle = "Dashboard";
+
+if ($skrg == "/kasir/index.php") {
+    $subtitle = "Dashboard";
+} elseif ($skrg == "/kasir/penjualan.php") {
+    $subtitle = "Penjualan";
+} elseif ($skrg == "/kasir/laporan.php") {
+    $subtitle = "Laporan";
+} elseif ($skrg == "/kasir/akun.php") {
+    $subtitle = "Akun";
+}
+
 ?>
 
 <!doctype html>
@@ -60,7 +74,7 @@ if (!isset($_SESSION['user'])) {
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <a href="akun.php" class="dropdown-item">Akun</a>
+                            <a href="akun.php" class="dropdown-item <?= ($skrg == '/kasir/akun.php') ? 'active' : ''; ?>">Akun</a>
                             <div class="dropdown-divider"></div>
                             <a href="logout.php" class="dropdown-item">Logout</a>
                         </div>
@@ -69,7 +83,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
+                            <li class="nav-item <?= ($skrg == '/kasir/index.php') ? 'active' : ''; ?>">
                                 <a class="nav-link" href="index.php">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         <!-- Download SVG icon from http://tabler-icons.io/i/home -->
@@ -85,7 +99,7 @@ if (!isset($_SESSION['user'])) {
                                     </span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item <?= ($skrg == '/kasir/penjualan.php') ? 'active' : ''; ?>">
                                 <a class="nav-link" href="penjualan.php">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         <!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
@@ -102,7 +116,7 @@ if (!isset($_SESSION['user'])) {
                                     </span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item <?= ($skrg == '/kasir/laporan.php') ? 'active' : ''; ?>">
                                 <a class="nav-link" href="laporan.php">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         <!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
@@ -138,7 +152,7 @@ if (!isset($_SESSION['user'])) {
                                 Halaman
                             </div>
                             <h2 class="page-title">
-                                Kasir
+                                <?= $subtitle; ?>
                             </h2>
                         </div>
                     </div>

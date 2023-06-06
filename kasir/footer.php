@@ -19,7 +19,7 @@
                 <ul class="list-inline list-inline-dots mb-0">
                     <li class="list-inline-item">
                         Copyright &copy; <?= date("Y"); ?>
-                        <a href="#" class="link-secondary">farpras</a>.
+                        <a href="https://github.com/prastya28/php-kasir" class="link-secondary">farpras</a>.
                         All rights reserved.
                     </li>
                 </ul>
