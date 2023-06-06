@@ -15,36 +15,34 @@ $user  = $ambil->fetch_assoc();
 
 <div class="page-body">
     <div class="container-xl">
-        <div class="row row-cards">
-            <form class="card" method="post">
-                <div class="card-header">
-                    <h3 class="card-title">Ubah Akun</h3>
-                </div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <label class="form-label required">Nama</label>
-                        <div>
-                            <input type="text" name="nama" class="form-control" placeholder="Masukkan nama" value="<?= $user['nama_user']; ?>">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label required">Email</label>
-                        <div>
-                            <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan email" value="<?= $user['email_user']; ?>">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label required">Password</label>
-                        <div>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
-                        </div>
+        <form class="card" method="post">
+            <div class="card-header">
+                <h3 class="card-title">Ubah Akun</h3>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label required">Nama</label>
+                    <div>
+                        <input type="text" name="nama" class="form-control" placeholder="Masukkan nama" value="<?= $user['nama_user']; ?>">
                     </div>
                 </div>
-                <div class="card-footer text-end">
-                    <button type="submit" name="ubah" class="btn btn-primary">Simpan</button>
+                <div class="mb-3">
+                    <label class="form-label required">Email</label>
+                    <div>
+                        <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan email" value="<?= $user['email_user']; ?>">
+                    </div>
                 </div>
-            </form>
-        </div>
+                <div class="mb-3">
+                    <label class="form-label required">Password</label>
+                    <div>
+                        <input type="password" name="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-end">
+                <button type="submit" name="ubah" class="btn btn-primary">Simpan</button>
+            </div>
+        </form>
     </div>
 </div>
 

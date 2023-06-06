@@ -40,7 +40,11 @@ while ($tiap = $ambil->fetch_assoc()) {
             </div>
             <div class="datagrid-item">
                 <div class="datagrid-title">Pelanggan</div>
-                <div class="datagrid-content"><?= $penjualan['nama_pelanggan']; ?> (<?= $penjualan['telepon_pelanggan']; ?>)</div>
+                <div class="datagrid-content">
+                    <?php if ($penjualan['id_pelanggan'] != 0) : ?>
+                        <?= $penjualan['nama_pelanggan']; ?> (<?= $penjualan['telepon_pelanggan']; ?>)
+                        <?php else : ?>-<?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
