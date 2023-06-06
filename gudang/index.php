@@ -114,7 +114,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Home
+                                    Beranda
                                 </span>
                             </a>
                         </li>
@@ -132,7 +132,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Suppliers
+                                    Supplier
                                 </span>
                             </a>
                         </li>
@@ -149,7 +149,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Categories
+                                    Kategori
                                 </span>
                             </a>
                         </li>
@@ -165,7 +165,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Products
+                                    Produk
                                 </span>
                             </a>
                         </li>
@@ -182,7 +182,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Customers
+                                    Pelanggan
                                 </span>
                             </a>
                         </li>
@@ -191,7 +191,7 @@ if ($skrg == "dashboard") {
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 </span>
                                 <span class="nav-link-title text-muted">
-                                    <strong>REPORTS</strong>
+                                    <strong>Laporan</strong>
                                 </span>
                             </span>
                         </li>
@@ -208,7 +208,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Sales
+                                    Penjualan
                                 </span>
                             </a>
                         </li>
@@ -228,17 +228,17 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Incomes
+                                    Pemasukkan
                                 </span>
                             </a>
                             <div class="dropdown-menu <?= ($skrg == 'laporan_penjualan' or $skrg == 'laporan_keuntungan') ? 'show' : ''; ?>">
                                 <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
                                         <a class="dropdown-item <?= ($skrg == 'laporan_penjualan') ? 'active' : ''; ?>" href="index.php?page=laporan_penjualan">
-                                            Sales
+                                            Penjualan
                                         </a>
                                         <a class="dropdown-item <?= ($skrg == 'laporan_keuntungan') ? 'active' : ''; ?>" href="index.php?page=laporan_keuntungan">
-                                            Revenues
+                                            Keuntungan
                                         </a>
 
                                     </div>
