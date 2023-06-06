@@ -24,7 +24,6 @@ while ($tiap = $ambil->fetch_assoc()) {
                     <th>Email</th>
                     <th>Telepon</th>
                     <th>Alamat</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -35,10 +34,6 @@ while ($tiap = $ambil->fetch_assoc()) {
                         <td><?= $value['email_pelanggan']; ?></td>
                         <td><?= $value['telepon_pelanggan']; ?></td>
                         <td><?= $value['alamat_pelanggan']; ?></td>
-                        <td>
-                            <a href="">Edit</a>
-                            <a href="">Hapus</a>
-                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

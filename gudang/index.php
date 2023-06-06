@@ -410,6 +410,12 @@ if ($skrg == "dashboard") {
     </div>
 
     <script src="../assets/js/tabler.min.js" defer></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#data').DataTable();
+        });
+    </script>
 </body>
 
 </html>

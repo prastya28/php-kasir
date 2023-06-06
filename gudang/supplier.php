@@ -19,7 +19,7 @@ while ($tiap = $ambil->fetch_assoc()) {
 
 <div class="card">
     <div class="table-responsive">
-        <table class="table table-vcenter card-table">
+        <table class="table table-vcenter card-table" id="data">
             <thead>
                 <tr>
                     <th class="w-1">No</th>
