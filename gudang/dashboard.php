@@ -66,10 +66,10 @@ $total_jumlah_penjualan = mysqli_fetch_assoc($ambil_jumlah_penjualan);
                     </div>
                     <div class="col">
                         <div class="font-weight-medium">
-                            <?= $total_produk[0]; ?> Products
+                            <?= $total_produk[0]; ?> Produk
                         </div>
                         <div class="text-muted">
-                            in <?= $total_kategori[0]; ?> categories
+                            pada <?= $total_kategori[0]; ?> kategori
                         </div>
                     </div>
                 </div>
@@ -95,10 +95,38 @@ $total_jumlah_penjualan = mysqli_fetch_assoc($ambil_jumlah_penjualan);
                     </div>
                     <div class="col">
                         <div class="font-weight-medium">
-                            <?= $total_toko[0]; ?> Stores
+                            <?= $total_toko[0]; ?> Toko
                         </div>
                         <div class="text-muted">
-                            with <?= $total_supplier[0]; ?> suppliers
+                            dengan <?= $total_supplier[0]; ?> supplier
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card card-sm">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <span class="bg-facebook text-white avatar">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+                                <rect x="9" y="3" width="6" height="4" rx="2"></rect>
+                                <path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path>
+                                <path d="M12 17v1m0 -8v1"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <div class="font-weight-medium">
+                            <?= $total_penjualan[0]; ?> Penjualan
+                        </div>
+                        <div class="text-muted">
+                            Total pendapatan Rp. <?= number_format($total_jumlah_penjualan['semua_penjualan']); ?>
                         </div>
                     </div>
                 </div>
@@ -126,35 +154,7 @@ $total_jumlah_penjualan = mysqli_fetch_assoc($ambil_jumlah_penjualan);
                             <?= $total_staff[0]; ?> Staff
                         </div>
                         <div class="text-muted">
-                            and <?= $total_pelanggan[0]; ?> registered customers
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-        <div class="card card-sm">
-            <div class="card-body">
-                <div class="row align-items-center">
-                    <div class="col-auto">
-                        <span class="bg-facebook text-white avatar">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
-                                <rect x="9" y="3" width="6" height="4" rx="2"></rect>
-                                <path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path>
-                                <path d="M12 17v1m0 -8v1"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="col">
-                        <div class="font-weight-medium">
-                            <?= $total_penjualan[0]; ?> Sales
-                        </div>
-                        <div class="text-muted">
-                            Rp. <?= number_format($total_jumlah_penjualan['semua_penjualan']); ?> total incomes
+                            dan <?= $total_pelanggan[0]; ?> pelanggan terdaftar
                         </div>
                     </div>
                 </div>

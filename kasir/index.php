@@ -40,7 +40,7 @@ while ($tiap = $ambil->fetch_assoc()) {
                         <div class="col-3">
                             <div class="card">
                                 <?php
-                                if ($value['stok_produk'] < 10) :
+                                if ($value['stok_produk'] < 5) :
                                 ?>
                                     <div class="ribbon bg-red">Stok menipis</div>
                                 <?php endif; ?>
