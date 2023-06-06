@@ -25,7 +25,7 @@ if ($skrg == "dashboard") {
 } else if ($skrg == 'pelanggan') {
     $subjudul = "Pelanggan";
 } else if ($skrg == 'penjualan') {
-    $subjudul = "Penjualan";
+    $subjudul = "Data Penjualan";
 } else if ($skrg == 'penjualan_produk') {
     $subjudul = "Penjualan";
 } else if ($skrg == 'supplier_tambah') {
@@ -40,6 +40,10 @@ if ($skrg == "dashboard") {
     $subjudul = "Tambah Produk";
 } else if ($skrg == 'produk_edit') {
     $subjudul = "Ubah Produk";
+} else if ($skrg == 'laporan_penjualan') {
+    $subjudul = "Laporan Penjualan";
+} else if ($skrg == 'laporan_keuntungan') {
+    $subjudul = "Laporan Keuntungan";
 } else {
     $subjudul = "404";
 }
@@ -203,7 +207,7 @@ if ($skrg == "dashboard") {
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 </span>
                                 <span class="nav-link-title text-muted">
-                                    <strong>Laporan</strong>
+                                    <strong>Transaksi</strong>
                                 </span>
                             </span>
                         </li>
@@ -220,7 +224,7 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Penjualan
+                                    Data Penjualan
                                 </span>
                             </a>
                         </li>
@@ -240,17 +244,17 @@ if ($skrg == "dashboard") {
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Pemasukkan
+                                    Laporan
                                 </span>
                             </a>
                             <div class="dropdown-menu <?= ($skrg == 'laporan_penjualan' or $skrg == 'laporan_keuntungan') ? 'show' : ''; ?>">
                                 <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
                                         <a class="dropdown-item <?= ($skrg == 'laporan_penjualan') ? 'active' : ''; ?>" href="index.php?page=laporan_penjualan">
-                                            Penjualan
+                                            Laporan Penjualan
                                         </a>
                                         <a class="dropdown-item <?= ($skrg == 'laporan_keuntungan') ? 'active' : ''; ?>" href="index.php?page=laporan_keuntungan">
-                                            Keuntungan
+                                            Laporan Keuntungan
                                         </a>
 
                                     </div>
@@ -361,6 +365,10 @@ if ($skrg == "dashboard") {
                                 include 'produk_edit.php';
                             } else if ($_GET['page'] == 'produk_hapus') {
                                 include 'produk_hapus.php';
+                            } else if ($_GET['page'] == 'laporan_penjualan') {
+                                include 'laporan_penjualan.php';
+                            } else if ($_GET['page'] == 'laporan_keuntungan') {
+                                include 'laporan_keuntungan.php';
                             } else if ($_GET['page'] == 'logout') {
                                 include 'logout.php';
                             }
