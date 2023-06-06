@@ -83,7 +83,7 @@
 
 <script>
     $(document).ready(function() {
-        $(".link-produk").on("click", function() {
+        $(document).on("click", ".link-produk", function() {
             // dapatkan idnya
             var id_produk = $(this).attr("idnya");
             $.ajax({

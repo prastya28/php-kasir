@@ -13,6 +13,10 @@ while ($tiap = $ambil->fetch_assoc()) {
 // echo '</pre>';
 ?>
 
+<div class="mb-3">
+    <a href="index.php?page=supplier_tambah" class="btn btn-primary">Tambah</a>
+</div>
+
 <div class="card">
     <div class="table-responsive">
         <table class="table table-vcenter card-table">
