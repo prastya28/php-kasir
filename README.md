@@ -29,3 +29,4 @@ Dibuat dengan bimbingan tutorial dari [Team TRAINIT](https://www.youtube.com/@Te
 - [Tutorial Playlist](https://www.youtube.com/playlist?list=PLoYZCiuF11rypAjU5KsuWZdBsUN1L6qhh)
 - [Tabler.io](https://tabler.io/) - Custom Bootstrap Theme
 - [Laragon](https://laragon.org/) - PHP & MySQL local web server
+- [Placekitten](https://placekitten.com/) - Placeholder kitten images :smiley_cat:
