@@ -57,18 +57,22 @@ if (isset($_SESSION['keranjang'])) {
 </div>
 
 <div class="mt-3 mb-2">
-    <form action="" method="post">
+    <form action="checkout.php" method="post" target="_blank">
         <div class="mb-3">
             <label for="" class="form-label">Total</label>
             <input type="number" name="total" class="form-control total" value="<?= $total; ?>" readonly>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Bayar</label>
-            <input type="number" name="bayar" class="form-control bayar">
+            <input type="number" name="bayar" class="form-control bayar" required>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Kembalian</label>
             <input type="number" name="kembalian" class="form-control kembalian" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Telepon</label>
+            <input type="text" name="telepon" class="form-control" placeholder="62">
         </div>
         <button class="btn btn-primary w-100">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
