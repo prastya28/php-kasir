@@ -65,7 +65,9 @@ if (isset($_POST['simpan'])) {
             WHERE id_user='$id_user' AND id_toko='$id_toko' ");
     }
 
-    echo "<script>alert('Data pengguna tersimpan!')</script>";
+    // echo "<script>alert('Data pengguna tersimpan!')</script>";
+    $_SESSION['status'] = "Data pengguna berhasil diubah!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=user'</script>";
 }
 

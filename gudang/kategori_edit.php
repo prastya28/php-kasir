@@ -29,7 +29,9 @@ if (isset($_POST['simpan'])) {
 
     $koneksi->query("UPDATE kategori SET nama_kategori='$nama' WHERE id_kategori='$id_kategori' AND id_toko='$id_toko' ");
 
-    echo "<script>alert('Data kategori tersimpan!')</script>";
+    // echo "<script>alert('Data kategori tersimpan!')</script>";
+    $_SESSION['status'] = "Data kategori berhasil diubah!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=kategori'</script>";
 }
 

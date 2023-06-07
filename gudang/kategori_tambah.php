@@ -20,7 +20,9 @@ if (isset($_POST['simpan'])) {
 
     $koneksi->query("INSERT INTO kategori (id_toko,nama_kategori) VALUES ('$id_toko','$nama') ");
 
-    echo "<script>alert('Data kategori tersimpan!')</script>";
+    // echo "<script>alert('Data kategori tersimpan!')</script>";
+    $_SESSION['status'] = "Kategori baru berhasil ditambahkan!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=kategori'</script>";
 }
 

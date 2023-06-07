@@ -17,5 +17,7 @@ while ($tiap = $ambil->fetch_assoc()) {
 $koneksi->query("DELETE FROM penjualan_produk WHERE id_penjualan='$id_penjualan' AND id_toko='$id_toko' ");
 $koneksi->query("DELETE FROM penjualan WHERE id_penjualan='$id_penjualan' AND id_toko='$id_toko' ");
 
-echo "<script>alert('Data penjualan telah dihapus!')</script>";
+// echo "<script>alert('Data penjualan telah dihapus!')</script>";
+$_SESSION['status'] = "Data penjualan telah dihapus!";
+$_SESSION['status_type'] = "warning";
 echo "<script>location='penjualan.php'</script>";

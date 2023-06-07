@@ -23,7 +23,7 @@ if ($skrg == "dashboard") {
 } else if ($skrg == 'produk') {
     $subjudul = "Produk";
 } else if ($skrg == 'pelanggan') {
-    $subjudul = "Pelanggan";
+    $subjudul = "Data Pelanggan";
 } else if ($skrg == 'penjualan') {
     $subjudul = "Data Penjualan";
 } else if ($skrg == 'penjualan_produk') {

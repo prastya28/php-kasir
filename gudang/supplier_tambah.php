@@ -20,7 +20,9 @@ if (isset($_POST['simpan'])) {
 
     $koneksi->query("INSERT INTO supplier (id_toko,nama_supplier) VALUES ('$id_toko','$nama') ");
 
-    echo "<script>alert('Data supplier tersimpan!')</script>";
+    // echo "<script>alert('Data supplier tersimpan!')</script>";
+    $_SESSION['status'] = "Supplier baru berhasil ditambahkan!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=supplier'</script>";
 }
 

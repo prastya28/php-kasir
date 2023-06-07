@@ -100,7 +100,9 @@ if (isset($_POST['simpan'])) {
     }
 
 
-    echo "<script>alert('Data produk berhasil ditambahkan!')</script>";
+    // echo "<script>alert('Data produk berhasil ditambahkan!')</script>";
+    $_SESSION['status'] = "Produk baru berhasil ditambahkan!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=produk'</script>";
 }
 

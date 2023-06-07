@@ -131,8 +131,9 @@ if (isset($_POST['simpan'])) {
                             WHERE id_produk='$id_produk' AND id_toko='$id_toko' ");
     }
 
-
-    echo "<script>alert('Data produk berhasil disimpan!')</script>";
+    // echo "<script>alert('Data produk berhasil disimpan!')</script>";
+    $_SESSION['status'] = "Data produk berhasil diubah!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=produk'</script>";
 }
 

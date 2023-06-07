@@ -29,7 +29,9 @@ if (isset($_POST['simpan'])) {
 
     $koneksi->query("UPDATE supplier SET nama_supplier='$nama' WHERE id_supplier='$id_supplier' AND id_toko='$id_toko' ");
 
-    echo "<script>alert('Data supplier tersimpan!')</script>";
+    // echo "<script>alert('Data supplier tersimpan!')</script>";
+    $_SESSION['status'] = "Data supplier berhasil diubah!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=supplier'</script>";
 }
 

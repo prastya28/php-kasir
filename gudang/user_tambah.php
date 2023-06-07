@@ -39,7 +39,9 @@ if (isset($_POST['simpan'])) {
 
     $koneksi->query("INSERT INTO user (id_toko,nama_user,email_user,password_user,level_user) VALUES ('$id_toko','$nama','$email','$password','$level') ");
 
-    echo "<script>alert('Data pengguna baru tersimpan!')</script>";
+    // echo "<script>alert('Data pengguna baru tersimpan!')</script>";
+    $_SESSION['status'] = "Pengguna baru berhasil ditambahkan!";
+    $_SESSION['status_type'] = "success";
     echo "<script>location='index.php?page=user'</script>";
 }
 
