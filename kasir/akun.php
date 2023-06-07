@@ -61,7 +61,7 @@ $user  = $ambil->fetch_assoc();
                     </small>
                 </div>
             </div>
-            <div class="card-footer text-end">
+            <div class="card-footer text-start">
                 <button type="submit" name="ubah" class="btn btn-primary">Simpan</button>
             </div>
         </form>

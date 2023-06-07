@@ -67,6 +67,8 @@ if ($skrg == "dashboard") {
     <title><?= $subjudul; ?> / Gudang</title>
     <!-- CSS files -->
     <link href="../assets/css/tabler.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 </head>
 
 <body>
@@ -423,9 +425,10 @@ if ($skrg == "dashboard") {
     <script src="../assets/js/tabler.min.js" defer></script>
 
     <script>
-        $(document).ready(function() {
-            $('#data').DataTable();
-        });
+        $('#modal-danger').on('show.bs.modal', function(e) {
+            var url = $(e.relatedTarget).data('url');
+            $(e.currentTarget).find('#hapus-data').attr("href", url);
+        })
     </script>
 </body>
 
