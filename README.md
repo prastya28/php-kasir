@@ -22,6 +22,12 @@ Kasir:
 > Email: [test@test.com](mailto:test@test.com)
 > Password: 123456
 
+## Screenshot
+
+![SS1](https://raw.githubusercontent.com/prastya28/php-kasir/main/assets/img/ss/ss1.png)
+![SS2](https://raw.githubusercontent.com/prastya28/php-kasir/main/assets/img/ss/ss2.png)
+![SS3](https://raw.githubusercontent.com/prastya28/php-kasir/main/assets/img/ss/ss3.png)
+
 ## Credits
 
 Dibuat dengan bimbingan tutorial dari [Team TRAINIT](https://www.youtube.com/@TeamTRAINIT) dengan beberapa perubahan.
