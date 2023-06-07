@@ -63,4 +63,6 @@ foreach ($_SESSION['keranjang'] as $id_produk => $jumlah) {
 unset($_SESSION['keranjang']);
 
 // Redirect ke halaman nota
-echo "<script>location='nota.php?id=$id_penjualan'</script>";
+$_SESSION['status'] = "Transaksi pembelian berhasil!";
+$_SESSION['status_type'] = "success";
+echo "<script>location='penjualan_produk.php?id=$id_penjualan'</script>";

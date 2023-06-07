@@ -57,7 +57,7 @@ if (isset($_SESSION['keranjang'])) {
 </div>
 
 <div class="mt-3 mb-2">
-    <form action="checkout.php" method="post" target="_blank">
+    <form action="checkout.php" method="post">
         <div class="mb-3">
             <label for="" class="form-label">Total</label>
             <input type="number" name="total" class="form-control total" value="<?= $total; ?>" readonly>
@@ -81,7 +81,7 @@ if (isset($_SESSION['keranjang'])) {
                 <circle cx="14" cy="14" r="2"></circle>
                 <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"></path>
             </svg>
-            Checkout
+            Beli
         </button>
     </form>
 </div>
