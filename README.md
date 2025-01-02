@@ -24,15 +24,12 @@ Kasir:
 
 ## Screenshot
 
-![SS1](https://raw.githubusercontent.com/prastya28/php-kasir/main/assets/img/ss/ss1.png)
-![SS2](https://raw.githubusercontent.com/prastya28/php-kasir/main/assets/img/ss/ss2.png)
-![SS3](https://raw.githubusercontent.com/prastya28/php-kasir/main/assets/img/ss/ss3.png)
+![SS1](https://raw.githubusercontent.com/prastya28/php-kasir/refs/heads/main/assets/img/ss/ss1.png)
+![SS2](https://raw.githubusercontent.com/prastya28/php-kasir/refs/heads/main/assets/img/ss/ss2.png)
+![SS3](https://raw.githubusercontent.com/prastya28/php-kasir/refs/heads/main/assets/img/ss/ss3.png)
 
 ## Credits
 
-Dibuat dengan bimbingan tutorial dari [Team TRAINIT](https://www.youtube.com/@TeamTRAINIT) dengan beberapa perubahan.
-
-- [Tutorial Playlist](https://www.youtube.com/playlist?list=PLoYZCiuF11rypAjU5KsuWZdBsUN1L6qhh)
 - [Tabler.io](https://tabler.io/) - Custom Bootstrap Theme
 - [Laragon](https://laragon.org/) - PHP & MySQL local web server
 - [Placekitten](https://placekitten.com/) - Placeholder kitten images :smiley_cat:
